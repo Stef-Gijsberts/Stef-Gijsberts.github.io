@@ -7,11 +7,13 @@ import './style.css';
 export function App() {
 	return (
 		<LocationProvider>
-			<main>
-				<Router>
-					<Route path="/" component={Home} />
-					<Route default component={NotFound} />
-				</Router>
+			<main class="min-h-screen bg-neutral-50 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
+				<div class="max-w-4xl mx-auto p-6 sm:p-10">
+					<Router>
+						<Route path="/" component={Home} />
+						<Route default component={NotFound} />
+					</Router>
+				</div>
 			</main>
 		</LocationProvider>
 	);
