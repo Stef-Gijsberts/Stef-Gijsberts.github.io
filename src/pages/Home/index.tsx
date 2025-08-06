@@ -8,8 +8,6 @@ export function Home() {
 				<p class="text-lg">Hallo, wereld!</p>
 			</header>
 
-			<hr class="border-0 h-2 bg-black dark:bg-neutral-100 my-8 shadow-[6px_6px_0_0_#000] dark:shadow-[6px_6px_0_0_#fafafa]" />
-
 			<section class="grid md:grid-cols-2 gap-6 mt-8">
 				<div class="bg-white dark:bg-neutral-900 border-4 border-black dark:border-neutral-100 p-4 shadow-[8px_8px_0_0_#000] dark:shadow-[8px_8px_0_0_#fafafa]">
 					<h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-2 mb-4">Activiteiten</h2>
