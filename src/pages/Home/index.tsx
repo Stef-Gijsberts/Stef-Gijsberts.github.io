@@ -61,10 +61,10 @@ export function Home() {
 			</section>
 
 			<div class="mt-10 flex gap-4">
-				<Button href="https://github.com/Stef-Gijsberts" variant="white">
+				<Button href="https://github.com/Stef-Gijsberts" variant="yellow">
 					GitHub
 				</Button>
-				<Button href="https://linkedin.com/in/stef-gijsberts" variant="white">
+				<Button href="https://linkedin.com/in/stef-gijsberts" variant="yellow">
 					LinkedIn
 				</Button>
 				<Button href="mailto:stef@stef.link" variant="blue">
