@@ -1,6 +1,6 @@
 import { ReactNode, AnchorHTMLAttributes } from 'react';
 
-type Variant = 'yellow' | 'red' | 'blue';
+type Variant = 'primary' | 'outline';
 
 type ButtonProps = {
   href: string;
@@ -9,17 +9,15 @@ type ButtonProps = {
 } & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href' | 'children'>;
 
 const base =
-  'inline-block px-5 py-3 border-4 border-black shadow-[6px_6px_0_0_#000] active:translate-x-1 active:translate-y-1 active:shadow-[2px_2px_0_0_#000] hover:bg-black';
+  'inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2';
 
-const variantClasses: Record<Variant, { fg: string; bg: string; hover: string }> = {
-  yellow: { fg: 'text-black', bg: 'bg-yellow-600', hover: 'hover:text-yellow-400'},
-  red: { fg: 'text-white', bg: 'bg-red-600', hover: 'hover:text-red-400' },
-  blue: { fg: 'text-white', bg: 'bg-blue-600', hover: 'hover:text-blue-400' },
+const variantClasses: Record<Variant, string> = {
+  primary: 'bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800',
+  outline: 'border border-neutral-300 text-neutral-900 hover:bg-neutral-50 active:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-100 dark:hover:bg-neutral-800',
 };
 
-export function Button({ href, children, variant = 'red', className, ...rest }: ButtonProps) {
-  const v = variantClasses[variant];
-  const cls = [base, v.fg, v.bg, v.hover, className].filter(Boolean).join(' ');
+export function Button({ href, children, variant = 'primary', className, ...rest }: ButtonProps) {
+  const cls = [base, variantClasses[variant], className].filter(Boolean).join(' ');
   return (
     <a href={href} className={cls} {...rest}>
       {children}

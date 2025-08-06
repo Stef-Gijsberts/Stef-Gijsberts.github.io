@@ -7,7 +7,7 @@ import './style.css';
 export function App() {
 	return (
 		<LocationProvider>
-			<main class="min-h-screen bg-neutral-50 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
+			<main class="page-wrap min-h-screen text-[--color-fg] dark:text-[--color-fg-dark]">
 				<div class="max-w-4xl mx-auto p-6 sm:p-10">
 					<Router>
 						<Route path="/" component={Home} />
