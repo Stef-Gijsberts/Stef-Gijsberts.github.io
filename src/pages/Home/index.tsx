@@ -1,31 +1,36 @@
-import preactLogo from '../../assets/preact.svg';
-import './style.css';
-
 export function Home() {
 	return (
-		<div class="home">
-			<a href="https://preactjs.com" target="_blank">
-				<img src={preactLogo} alt="Preact logo" height="160" width="160" />
-			</a>
-			<h1>Get Started building Vite-powered Preact Apps </h1>
-			<section>
-				<Resource
-					title="Learn Preact"
-					description="If you're new to Preact, try the interactive tutorial to learn important concepts"
-					href="https://preactjs.com/tutorial"
-				/>
-				<Resource
-					title="Differences to React"
-					description="If you're coming from React, you may want to check out our docs to see where Preact differs"
-					href="https://preactjs.com/guide/v10/differences-to-react"
-				/>
-				<Resource
-					title="Learn Vite"
-					description="To learn more about Vite and how you can customize it to fit your needs, take a look at their excellent documentation"
-					href="https://vitejs.dev"
-				/>
-			</section>
-		</div>
+		<article>
+			<header>
+				<h1>Stef Gijsberts</h1>
+				<p>Hallo, wereld!</p>
+			</header>
+
+			<hr/>
+
+			<h2>Activiteiten</h2>
+			<ul>
+				<li>Bachelor Computing Science aan de Radboud Universiteit Nijmegen (2019 - 2025)</li>
+				<li>Softwareontwikkelaar bij Monter Leefstijl (september 2022 - heden)</li>
+                <li>Commissaris Extern, bestuur IV van SSVN Tussen de Torens (2024-2025)</li>
+			</ul>
+
+			<h2>Projecten</h2>
+			<ul>
+				<li><a href="https://github.com/screensy/screensy"><cite>Screensy</cite></a>, samen met <a href="https://nl.linkedin.com/in/marijnvanwezel">Marijn van Wezel</a></li>
+			</ul>
+
+			<h2>Links</h2>
+			<ul>
+				<li><a href="https://github.com/Stef-Gijsberts">GitHub</a></li>
+				<li><a href="https://www.cs.ru.nl/bachelors-theses/2023/Stef_Gijsberts___1034031___Prusti_in_Practice_-_A_case_study_of_using_the_Prusti_auto-active_program_verifier_for_Rust.pdf">Bachelorscriptie</a></li>
+			</ul>
+
+			<h2>Contact</h2>
+			<address>
+				Stuur een e-mail naar <a href="mailto:stef@stef.link">stef@stef.link</a>.<br/>
+			</address>
+		</article>
 	);
 }
 
