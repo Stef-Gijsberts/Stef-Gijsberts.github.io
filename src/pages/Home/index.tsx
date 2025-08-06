@@ -1,3 +1,5 @@
+import { Button } from '../../components/Button';
+
 export function Home() {
 	return (
 		<article class="bg-white dark:bg-neutral-900 border-4 border-black dark:border-neutral-100 p-6 sm:p-10 shadow-[12px_12px_0_0_#000] dark:shadow-[12px_12px_0_0_#fafafa]">
@@ -61,18 +63,12 @@ export function Home() {
 			</section>
 
 			<div class="mt-10 flex gap-4">
-				<a
-					class="inline-block bg-red-600 text-white px-5 py-3 border-4 border-black shadow-[6px_6px_0_0_#000] active:translate-x-1 active:translate-y-1 active:shadow-[2px_2px_0_0_#000] hover:bg-black hover:text-red-400"
-					href="https://github.com/Stef-Gijsberts"
-				>
+				<Button href="https://github.com/Stef-Gijsberts" variant="red">
 					Bekijk GitHub
-				</a>
-				<a
-					class="inline-block bg-blue-600 text-white px-5 py-3 border-4 border-black shadow-[6px_6px_0_0_#000] active:translate-x-1 active:translate-y-1 active:shadow-[2px_2px_0_0_#000] hover:bg-black hover:text-blue-400"
-					href="mailto:stef@stef.link"
-				>
+				</Button>
+				<Button href="mailto:stef@stef.link" variant="blue">
 					Neem contact op
-				</a>
+				</Button>
 			</div>
 		</article>
 	);
