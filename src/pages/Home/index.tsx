@@ -18,8 +18,9 @@ export function Home() {
 					<h2 id="activiteiten-title" class="text-2xl md:text-3xl font-semibold text-neutral-900 dark:text-neutral-100 mt-2 mb-4">Activiteiten</h2>
 					<ul class="list-disc pl-6 space-y-2 text-neutral-800 dark:text-neutral-200 leading-relaxed">
 						<li>Bachelor Computing Science aan de Radboud Universiteit Nijmegen (2019 - 2025)</li>
-						<li>Softwareontwikkelaar bij Monter Leefstijl (september 2022 - heden)</li>
+						<li>Softwareontwikkelaar bij Monter Leefstijl (september 2022 - oktober 2025)</li>
 						<li>Commissaris Extern, bestuur IV van SSVN Tussen de Torens (2024-2025)</li>
+						<li>Softwareontwikkelaar bij DCCN (november 2025 - heden)</li>
 					</ul>
 				</div>
 
