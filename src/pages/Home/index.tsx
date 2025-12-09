@@ -20,7 +20,7 @@ export function Home() {
 						<li>Bachelor Computing Science aan de Radboud Universiteit Nijmegen (2019 - 2025)</li>
 						<li>Softwareontwikkelaar bij Monter Leefstijl (september 2022 - oktober 2025)</li>
 						<li>Commissaris Extern, bestuur IV van SSVN Tussen de Torens (2024-2025)</li>
-						<li>Softwareontwikkelaar bij DCCN (november 2025 - heden)</li>
+						<li>Softwareontwikkelaar bij Donders Centre for Cognitive Neuroimaging (november 2025 - heden)</li>
 					</ul>
 				</div>
 
