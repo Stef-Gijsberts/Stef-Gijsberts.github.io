@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="nl-NL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Stef Gijsberts - Software Developer. Expertise in Clojure, Rust, Web, and Legacy Code."
+    />
+    <title>Stef Gijsberts | Software Developer</title>
+    <style>
+      /* --- Variables & Theming --- */
+      :root {
+        /* Light Theme */
+        --bg-color: #fdfdfd;
+        --surface-color: #ffffff;
+        --text-main: #1f2937;
+        --text-muted: #4b5563;
+        --accent-color: #2563eb;
+        --accent-hover: #1d4ed8;
+        --border-color: #e5e7eb;
+        --code-bg: #f3f4f6;
+        --radius: 8px;
+        --max-width: 720px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          /* Dark Theme */
+          --bg-color: #111827;
+          --surface-color: #1f2937;
+          --text-main: #f9fafb;
+          --text-muted: #9ca3af;
+          --accent-color: #60a5fa; /* Lighter Blue */
+          --accent-hover: #93c5fd;
+          --border-color: #374151;
+          --code-bg: #374151;
+        }
+      }
+
+      /* --- Reset & Typography --- */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        padding: 2rem 1rem;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
+      }
+
+      h1,
+      h2,
+      h3 {
+        line-height: 1.2;
+        margin-bottom: 0.75rem;
+        color: var(--text-main);
+      }
+      h1 {
+        font-size: 2.25rem;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        margin-bottom: 0.5rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 0.5rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+      p,
+      li {
+        color: var(--text-muted);
+        font-size: 1.05rem;
+      }
+
+      a {
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      a:hover {
+        color: var(--accent-hover);
+        text-decoration: underline;
+      }
+
+      /* --- Layout Utilities --- */
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+      }
+
+      /* --- Component Styling --- */
+
+      /* Header Layout (Flexbox for Image + Text) */
+      header {
+        margin-bottom: 3rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      /* Profile Image Styling */
+      .profile-img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%; /* Makes it circular */
+        object-fit: cover;
+        background-color: var(--code-bg);
+        border: 2px solid var(--border-color);
+        flex-shrink: 0; /* Prevents image from squishing */
+      }
+
+      /* Responsive Header for Mobile */
+      @media (max-width: 600px) {
+        header {
+          flex-direction: column-reverse; /* Puts image on top on mobile */
+          text-align: center;
+          gap: 1.5rem;
+        }
+      }
+
+      .tagline {
+        font-size: 1.25rem;
+        color: var(--text-muted);
+        margin-top: 0.5rem;
+      }
+
+      /* Lists (Activities & Projects) */
+      ul {
+        list-style: none;
+      }
+      li {
+        margin-bottom: 1rem;
+        position: relative;
+        padding-left: 1.5rem;
+      }
+      li::before {
+        content: "•";
+        color: var(--accent-color);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+      }
+
+      /* Expertise Section */
+      .expertise-grid {
+        display: grid;
+        gap: 1rem;
+      }
+      .expertise-item strong {
+        display: block;
+        color: var(--text-main);
+        margin-bottom: 0.25rem;
+      }
+
+      /* Language Tags */
+      .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+      }
+      .tech-tag {
+        background-color: var(--code-bg);
+        color: var(--text-main);
+        padding: 0.2em 0.6em;
+        border-radius: 4px;
+        font-family:
+          "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.85em;
+        border: 1px solid var(--border-color);
+      }
+
+      /* Links Section */
+      .link-row {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      /* Footer */
+      footer {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border-color);
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <h1>Stef Gijsberts, BSc</h1>
+          <p class="tagline">Software Developer</p>
+          <p style="margin-top: 1rem">
+            Focused on building reliable software that brings joy and
+            <em>really</em> makes a difference.
+          </p>
+        </div>
+        <img
+          src="./stef-gijsberts.webp"
+          alt="Stef Gijsberts"
+          class="profile-img"
+        />
+      </header>
+
+      <main>
+        <section id="activities">
+          <h2>Activities</h2>
+          <ul>
+            <li>
+              <strong>Software Developer</strong> at Donders Centre for
+              Cognitive Neuroimaging <br />
+              <small>(November 2025 - Present)</small>
+            </li>
+            <li>
+              <strong>Commissioner of External Affairs</strong>, Board IV of
+              chess association SSVN Tussen de Torens <br />
+              <small>(2024 - 2025)</small>
+            </li>
+            <li>
+              <strong>Software Developer</strong> at Monter Leefstijl <br />
+              <small>(September 2022 - October 2025)</small>
+            </li>
+            <li>
+              <strong>Bachelor Computing Science</strong> at Radboud
+              Universiteit Nijmegen <br />
+              <small>(2019 - 2025)</small>
+            </li>
+          </ul>
+        </section>
+
+        <section id="expertise">
+          <h2>Technical Expertise</h2>
+          <div class="expertise-grid">
+            <div class="expertise-item">
+              <strong>Web Programming</strong>
+              <p>
+                Gets things done fast and correctly in large
+                Single-Page-Applications (e.g., Vue, React).
+              </p>
+            </div>
+            <div class="expertise-item">
+              <strong>Legacy Code</strong>
+              <p>
+                Efficient at cleaning up or rewriting codebases that are in
+                desperate need of maintenance.
+              </p>
+            </div>
+            <div class="expertise-item">
+              <strong>Languages</strong>
+              <p>Can quickly get up to speed in many different environments.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Clojure</span>
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Rust</span>
+                <span class="tech-tag">C</span>
+                <span class="tech-tag">Go</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">Zig</span>
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">Python</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects">
+          <h2>Featured Projects</h2>
+          <ul>
+            <li>
+              <a href="https://github.com/screensy/screensy" target="_blank"
+                >Screensy</a
+              >
+              <p>A simple peer-to-peer screen sharing application.</p>
+            </li>
+            <li>
+              <a
+                href="https://github.com/hexil-org/hexer/blob/main/docs/hexil_action_notation.md"
+                target="_blank"
+                >HAN (Hexil Action Notation)</a
+              >
+              <p>
+                An open standard for recording and sharing games of Settlers of
+                Catan, similar to algebraic notation in chess.
+              </p>
+            </li>
+            <li>
+              <a
+                href="https://github.com/Stef-Gijsberts/interfere-synth"
+                target="_blank"
+                >Interfere Synth</a
+              >
+              <p>A very simple audio synthesizer written in Rust.</p>
+            </li>
+          </ul>
+        </section>
+
+        <section id="links">
+          <h2>Links & Publications</h2>
+          <ul>
+            <li>
+              <a href="https://github.com/Stef-Gijsberts" target="_blank"
+                >GitHub Profile</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.cs.ru.nl/bachelors-theses/2023/Stef_Gijsberts___1034031___Prusti_in_Practice_-_A_case_study_of_using_the_Prusti_auto-active_program_verifier_for_Rust.pdf"
+                target="_blank"
+                >Prusti in Practice (Bachelor's Thesis)</a
+              >
+              <p>
+                A case study on using the Prusti auto-active program verifier
+                for Rust.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>
+            <a href="mailto:stef@stef.link">stef@stef.link</a>
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2026 Stef Gijsberts.</p>
+      </footer>
+    </div>
+  </body>
+</html>
